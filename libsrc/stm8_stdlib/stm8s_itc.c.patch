@@ -1,0 +1,12 @@
+--- src/stm8s_itc.c	2014-09-19 12:45:04.266068330 +0200
++++ stm8s_itc.c	2014-09-19 12:51:29.280254183 +0200
+@@ -49,6 +49,9 @@
+   return; /* Ignore compiler warning, the returned value is in A register */
+ #elif defined _RAISONANCE_ /* _RAISONANCE_ */
+   return _getCC_();
++#elif defined ( _SDCC_ )
++  __asm__("push cc");
++  __asm__("pop a");
+ #else /* _IAR_ */
+   asm("push cc");
+   asm("pop a"); /* Ignore compiler warning, the returned value is in A register */

@@ -30,3 +30,14 @@
 
 # Debug files
 *.dSYM/
+
+# SDCC build output
+*.asm
+*.cdb
+*.ihx
+*.lk
+*.lst
+*.map
+*.rel
+*.rst
+*.sym

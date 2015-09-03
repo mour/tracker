@@ -1,0 +1,5 @@
+build
+inc
+src
+*.a
+*.zip
